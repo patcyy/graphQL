@@ -1,0 +1,10 @@
+type Query {
+	firstQuery : String
+	yourInput(input : String): String
+	inputWIthReqBody(sampleRequest : SampleRequest) : String
+}
+
+input SampleRequest {
+	fName : String!
+	lName : String
+}
