@@ -3,7 +3,7 @@ package com.pratik.graphQL.queries;
 import org.springframework.stereotype.Component;
 
 import com.coxautodev.graphql.tools.GraphQLQueryResolver;
-import com.pratik.graphQL.bean.SampleRequest;
+import com.pratik.graphQL.request.SampleRequest;
 
 @Component
 public class Query implements GraphQLQueryResolver {

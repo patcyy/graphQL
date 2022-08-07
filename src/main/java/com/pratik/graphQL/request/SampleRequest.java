@@ -1,4 +1,4 @@
-package com.pratik.graphQL.bean;
+package com.pratik.graphQL.request;
 
 public class SampleRequest {
 
