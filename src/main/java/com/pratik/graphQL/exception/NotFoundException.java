@@ -21,4 +21,9 @@ public class NotFoundException extends RuntimeException {
 		return errorMessage;
 	}
 
+	@Override
+	public String toString() {
+		return "NotFoundException [errorCode=" + errorCode + ", errorMessage=" + errorMessage + "]";
+	}
+
 }

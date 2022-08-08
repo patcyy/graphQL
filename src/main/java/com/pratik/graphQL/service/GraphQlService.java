@@ -21,7 +21,7 @@ public class GraphQlService implements IGraphQlService {
 	}
 
 	@Override
-	public Student fetchStudentById(int id) {
+	public Student fetchStudentById(int id) throws NotFoundException{
 		return studentRepo.findById(id).orElseThrow(() -> new NotFoundException("Student Not Found with Id : " + id));
 	}
 

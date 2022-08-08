@@ -6,9 +6,9 @@ public class SubjectResponse {
 
 	private int subjectId;
 
-	private int subjectName;
+	private String subjectName;
 
-	public SubjectResponse(int subjectId, int subjectName) {
+	public SubjectResponse(int subjectId, String subjectName) {
 		this.subjectId = subjectId;
 		this.subjectName = subjectName;
 	}
@@ -29,11 +29,11 @@ public class SubjectResponse {
 		this.subjectId = subjectId;
 	}
 
-	public int getSubjectName() {
+	public String getSubjectName() {
 		return subjectName;
 	}
 
-	public void setSubjectName(int subjectName) {
+	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
 

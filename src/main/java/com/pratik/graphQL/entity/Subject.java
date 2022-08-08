@@ -18,14 +18,13 @@ public class Subject {
 	private int subjectId;
 
 	@Column(name = "NAME")
-	private int subjectName;
+	private String subjectName;
 
 	@ManyToOne(cascade = CascadeType.ALL, fetch = FetchType.EAGER)
 	@JoinColumn(name = "STUDENT_ID")
 	private Student student;
 
-	public Subject(int subjectId, int subjectName, Student student) {
-		super();
+	public Subject(int subjectId, String subjectName, Student student) {
 		this.subjectId = subjectId;
 		this.subjectName = subjectName;
 		this.student = student;
@@ -43,11 +42,11 @@ public class Subject {
 		this.subjectId = subjectId;
 	}
 
-	public int getSubjectName() {
+	public String getSubjectName() {
 		return subjectName;
 	}
 
-	public void setSubjectName(int subjectName) {
+	public void setSubjectName(String subjectName) {
 		this.subjectName = subjectName;
 	}
 

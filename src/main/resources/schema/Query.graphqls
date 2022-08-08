@@ -2,9 +2,24 @@ type Query {
 	firstQuery : String
 	yourInput(input : String): String
 	inputWIthReqBody(sampleRequest : SampleRequest) : String
+	student (id : Int) : StudentResponse
 }
 
 input SampleRequest {
 	fName : String!
 	lName : String
+}
+
+type StudentResponse {
+	studentId : Int
+	fName : String
+	lName : String
+	dob : String
+	city : String
+	subjects : [SubjectResponse]
+}
+
+type SubjectResponse {
+	subjectId : Int
+	subjectName : String
 }
