@@ -18,6 +18,9 @@ public class StudentResponse {
 	private String city;
 
 	private List<SubjectResponse> subjects;
+	
+	//For Resolver purpose. Do not put in Schema
+	private Student student;
 
 	public StudentResponse(int studentId, String fName, String lName, String dob, String city,
 			List<SubjectResponse> subjects) {
@@ -39,8 +42,13 @@ public class StudentResponse {
 		this.lName = student.getlName();
 		this.dob = student.getDob();
 		this.city = student.getCity();
-		this.subjects = new ArrayList<>();
-		student.getSubjects().forEach(e -> subjects.add(new SubjectResponse(e)));
+		
+		this.student=student;
+		//Moved to Resolver
+		/*
+		 * this.subjects = new ArrayList<>(); student.getSubjects().forEach(e ->
+		 * subjects.add(new SubjectResponse(e)));
+		 */
 	}
 
 	public int getStudentId() {
@@ -89,6 +97,10 @@ public class StudentResponse {
 
 	public void setSubjects(List<SubjectResponse> subjects) {
 		this.subjects = subjects;
+	}
+
+	public Student getStudent() {
+		return student;
 	}
 
 	@Override

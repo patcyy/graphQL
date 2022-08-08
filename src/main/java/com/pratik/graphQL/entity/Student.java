@@ -30,7 +30,7 @@ public class Student {
 	@Column(name = "CITY")
 	private String city;
 
-	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "student")
+	@OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY, mappedBy = "student")
 	private List<Subject> subjects;
 
 	public Student(int studentId, String fName, String lName, String dob, String city, List<Subject> subjects) {
