@@ -16,10 +16,17 @@ type StudentResponse {
 	lName : String
 	dob : String
 	city : String
-	subjects : [SubjectResponse]
+	subjects (subjectEnum : SubjectEnum) : [SubjectResponse]
 }
 
 type SubjectResponse {
 	subjectId : Int
 	subjectName : String
+}
+
+enum SubjectEnum {
+	All,
+	Math,
+	Power_System,
+	Electrical_Machine
 }
