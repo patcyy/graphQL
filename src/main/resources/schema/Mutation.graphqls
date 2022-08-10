@@ -1,0 +1,15 @@
+type Mutation {
+	createStudent(studentRequest : StudentRequest) : String
+}
+
+input StudentRequest {
+	fName : String
+	lName : String
+	dob : String
+	city : String
+	subjects : [SubjectRequest]
+}
+
+input SubjectRequest {
+	subjectName : String
+}

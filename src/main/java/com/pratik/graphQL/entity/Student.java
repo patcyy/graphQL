@@ -10,6 +10,8 @@ import javax.persistence.Id;
 import javax.persistence.OneToMany;
 import javax.persistence.Table;
 
+import org.apache.commons.lang3.RandomUtils;
+
 @Entity
 @Table(name = "STUDENT")
 public class Student {
@@ -41,6 +43,15 @@ public class Student {
 		this.dob = dob;
 		this.city = city;
 		this.subjects = subjects;
+	}
+
+	public Student(String fName, String lName, String dob, String city) {
+		super();
+		this.fName = fName;
+		this.lName = lName;
+		this.dob = dob;
+		this.city = city;
+		this.studentId=RandomUtils.nextInt();
 	}
 
 	public Student() {
