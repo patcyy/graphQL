@@ -1,6 +1,12 @@
 package com.pratik.graphQL.exception;
 
-public class NotFoundException extends RuntimeException {
+import java.util.List;
+
+import graphql.ErrorType;
+import graphql.GraphQLError;
+import graphql.language.SourceLocation;
+
+public class NotFoundException extends RuntimeException implements GraphQLError{
 
 	private static final long serialVersionUID = 1L;
 
@@ -16,6 +22,11 @@ public class NotFoundException extends RuntimeException {
 	public String getErrorCode() {
 		return errorCode;
 	}
+	
+	@Override
+	public StackTraceElement[] getStackTrace() {
+        return null;
+    }
 
 	public String getErrorMessage() {
 		return errorMessage;
@@ -24,6 +35,16 @@ public class NotFoundException extends RuntimeException {
 	@Override
 	public String toString() {
 		return "NotFoundException [errorCode=" + errorCode + ", errorMessage=" + errorMessage + "]";
+	}
+
+	@Override
+	public List<SourceLocation> getLocations() {
+		return null;
+	}
+
+	@Override
+	public ErrorType getErrorType() {
+		return null;
 	}
 
 }

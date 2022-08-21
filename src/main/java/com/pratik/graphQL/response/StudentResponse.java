@@ -1,6 +1,5 @@
 package com.pratik.graphQL.response;
 
-import java.util.ArrayList;
 import java.util.List;
 
 import com.pratik.graphQL.entity.Student;
